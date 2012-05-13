@@ -1,0 +1,66 @@
+body
+{
+    width: 640px;
+    height: 960px;
+    border: 0.25em solid black;
+}
+
+.column
+{
+}
+
+.candidate
+{
+    display: block;
+    width: 100%;
+    border: 0.125em solid black;
+}
+
+.slider_button
+{
+    width: 20px;
+    height: 20px;
+    border: .125em solid black;
+    display: block;
+}
+
+.selected_candidate
+{
+	background-color: #6495ED;
+	color: white;
+	font-weight: bold;
+}
+
+#candidates
+{
+    width: 50%;
+    float: left;
+}
+
+#rating
+{
+    width: 40%;
+    padding: 0.75em;
+    float: right;
+}
+
+#plus_box
+{
+}
+
+#minus_box
+{
+}
+
+#slider_box
+{
+    width: 4px;
+    height: 500px;
+    display: block;
+}
+
+#selected_rating
+{
+	float: right;
+	display: block;
+}
