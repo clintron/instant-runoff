@@ -18,6 +18,7 @@ body
     height: 20px;
     border: .125em solid black;
     display: block;
+    text-align: center;
 }
 
 .selected_candidate
@@ -42,9 +43,11 @@ body
 
 #slider_box
 {
-    width: 4px;
+    width: 10px;
     height: 500px;
     display: block;
+    border: .125em solid black;
+    margin-left: 5px;
 }
 
 #selected_rating
