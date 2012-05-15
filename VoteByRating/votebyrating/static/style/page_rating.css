@@ -5,10 +5,6 @@ body
     border: 0.25em solid black;
 }
 
-.column
-{
-}
-
 .candidate
 {
     display: block;
@@ -44,14 +40,6 @@ body
     float: right;
 }
 
-#plus_box
-{
-}
-
-#minus_box
-{
-}
-
 #slider_box
 {
     width: 4px;
@@ -63,4 +51,5 @@ body
 {
 	float: right;
 	display: block;
+	padding-right: 0.25em;
 }
