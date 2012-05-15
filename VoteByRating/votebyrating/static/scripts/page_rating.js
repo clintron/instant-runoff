@@ -13,7 +13,7 @@ $(function()
 			"Commodo Elementum":0
 	};
 	
-	var change_selcted_rating = function(value) {
+	function change_selcted_rating(value) {
 		var name = $( ".selected_candidate" ).html()
 		$( "#selected_rating" ).html( name + ": " );
 		ratings_table[name] = value;
@@ -66,6 +66,26 @@ $(function()
 		var rating = ratings_table[$( this ).html()];
 		$( "#slider_box" ).slider( "value", rating );
 		change_selcted_rating( rating );
+	});
+	
+	$( "#plus_box" ).click(function()
+	{
+		var rating = ratings_table[$( ".selected_candidate" ).html()];
+		if (rating != 5)
+		{
+			$( "#slider_box" ).slider( "value", rating + 1 );
+			change_selcted_rating(rating + 1);
+		}
+	});
+	
+	$( "#minus_box" ).click(function()
+	{
+		var rating = ratings_table[$( ".selected_candidate" ).html()];
+		if (rating != -5)
+		{
+			$( "#slider_box" ).slider( "value", rating - 1 );
+			change_selcted_rating(rating - 1);
+		}
 	});
 		
 });
