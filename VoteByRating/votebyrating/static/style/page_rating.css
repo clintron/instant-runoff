@@ -1,58 +1,141 @@
 body
 {
-    width: 640px;
-    height: 960px;
-    border: 0.25em solid black;
+  width: 640px;
+  height: 960px;
+  border: 2px solid black;
 }
 
-.candidate
-{
-    display: block;
-    width: 100%;
-    border: 0.125em solid black;
-}
-
-.slider_button
-{
-    width: 20px;
-    height: 20px;
-    border: .125em solid black;
-    display: block;
-    text-align: center;
-}
-
-.selected_candidate
+div.selected_candidate
 {
 	background-color: #6495ED;
 	color: white;
 	font-weight: bold;
+	font-size: 23px;
+}
+
+span.selected_candidate
+{
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.candidate
+{
+  border: 1px solid black;
+  height: 25px;
+  font-size: 20px;
+}
+
+.slider_button
+{
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.candidate_label
+{
+	border: 1px solid black;
+	font-size: 10px;
+	height: 40px;
+	margin-top: 5px;
 }
 
 #candidates
 {
-    width: 50%;
-    float: left;
+  float: left;
+  width: 250px;
+  padding: 10px;
 }
 
 #rating
 {
-    width: 40%;
-    padding: 0.75em;
-    float: right;
+  float: left;
+  width: 50px;
+  padding: 10px;
 }
 
 #slider_box
 {
-    width: 10px;
-    height: 500px;
-    display: block;
-    border: .125em solid black;
-    margin-left: 5px;
+  width: 10px;
+  height: 500px;
+  border: 1px solid black;
+  margin-left: 5px;
 }
 
 #selected_rating
 {
 	float: right;
-	display: block;
-	padding-right: 0.25em;
+	padding-right: 5px;
+}
+
+#tick_marks
+{
+	float: left;
+	width: 5px;
+	padding-top: 6px;
+	padding-left: 10px;
+	line-height: 50px;
+}
+
+#slider_labels
+{
+	float: left;
+	width: 275px;
+}
+
+#plus_5
+{
+	background-color: #00FF00
+}
+
+#plus_4
+{
+	background-color: #33FF00
+}
+
+#plus_3
+{
+	background-color: #66FF00
+}
+
+#plus_2
+{
+	background-color: #99FF00
+}
+
+#plus_1
+{
+	background-color: #CCFF00
+}
+
+#dont_care
+{
+	background-color: #FFFF00
+}
+
+#minus_1
+{
+	background-color: #FFCC00
+}
+
+#minus_2
+{
+	background-color: #FF9900
+}
+
+#minus_3
+{
+	background-color: #FF6600
+}
+
+#minus_4
+{
+	background-color: #FF3300
+}
+
+#minus_5
+{
+	background-color: #FF0000
 }
