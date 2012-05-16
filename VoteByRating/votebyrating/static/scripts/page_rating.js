@@ -63,7 +63,7 @@ $(function()
 			for (var index in candidates)
 			{
 				var name = candidates[index];
-				var html;
+				var html = "";
 				if ( $( "div.selected_candidate" ).html() == name )
 				{
 					html = "<span class='selected_candidate'>" + name + "</span> ";
@@ -84,7 +84,7 @@ $(function()
 	function change_selcted_rating( value )
 	{
 		var name = $( ".selected_candidate" ).html()
-		$( "#selected_rating" ).html( name + " " );
+		$( "#selected_rating" ).html( "<span>" + name + "</span><div class='clear'></div>" );
 		candidate_rating_table[name] = value;
 		remove_candidate_from_rating_table( name );
 		rating_candidate_table[value + 5].push( name );
@@ -94,18 +94,18 @@ $(function()
 		{
 			for ( var i = 0; i < value; ++i )
 			{
-				$( "#selected_rating" ).append( "<img src='../thumbs_up.png' width='7' height='13'/> " );
+				$( "#selected_rating .clear" ).before( "<div class='ratingGood'></div>" );
 			}
 		}
 		else if ( value == 0 )
 		{
-			$( "#selected_rating" ).append( "___ " );
+			$( "#selected_rating .clear" ).before( "<div class='ratingNeutral'></div>" );
 		}
 		else
 		{
 			for ( var i = 0; i < value * -1; ++i )
 			{
-				$( "#selected_rating" ).append( "<img src='../thumbs_down.png' width='7' height='13'/> " );
+				$( "#selected_rating .clear" ).before( "<div class='ratingBad'></div>" );
 			}
 		}
 	};
@@ -133,7 +133,7 @@ $(function()
 	{
 		$( ".candidate" ).removeClass( "selected_candidate" );
 		$( this ).addClass( "selected_candidate" );
-		var rating = candidate_ratings_table[$( this ).html()];
+		var rating = candidate_rating_table[$( this ).html()];
 		$( "#slider_box" ).slider( "value", rating );
 		change_selcted_rating( rating );
 	});

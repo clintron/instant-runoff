@@ -1,6 +1,10 @@
 production.ini
 development.ini
 
+#pydev/eclipse stuff
+.project
+.pydevproject
+
 #python stuff
 *.egg-info
 *.egg
