@@ -11,7 +11,7 @@ div.selected_candidate
 	background-color: #6495ED;
 	color: white;
 	font-weight: bold;
-	font-size: 23px;
+	font-size: 20px;
 }
 
 span.selected_candidate
@@ -24,15 +24,14 @@ span.selected_candidate
 {
   border: 1px solid black;
   height: 25px;
-  font-size: 20px;
 }
 
 .slider_button
 {
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
-  text-align: center;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	text-align: center;
 }
 
 .candidate_label
@@ -41,20 +40,27 @@ span.selected_candidate
 	font-size: 10px;
 	height: 40px;
 	margin-top: 5px;
+	padding-left: 4px;
+	padding-top: 3px;
+}
+
+.clear
+{
+	clear:		both;
 }
 
 #candidates
 {
   float: left;
-  width: 250px;
+  width: 225px;
   padding: 10px;
 }
 
 #rating
 {
   float: left;
-  width: 50px;
-  padding: 10px;
+  width: 20px;
+  padding: 30px 25px 0px 5px;
 }
 
 #slider_box
@@ -106,15 +112,15 @@ span.selected_candidate
 {
 	float: left;
 	width: 5px;
-	padding-top: 6px;
-	padding-left: 10px;
+	padding-top: 25px;
+	padding-left: 30px;
 	line-height: 50px;
 }
 
 #slider_labels
 {
 	float: left;
-	width: 275px;
+	width: 295px;
 }
 
 #plus_5
@@ -170,9 +176,4 @@ span.selected_candidate
 #minus_5
 {
 	background-color: #FF0000
-}
-
-.clear
-{
-	clear:		both;
 }
