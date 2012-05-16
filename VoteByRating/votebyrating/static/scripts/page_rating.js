@@ -68,6 +68,10 @@ $(function()
 				{
 					html = "<span class='selected_candidate'>" + name + "</span> ";
 				}
+				else if ( index != candidates.length - 1 )
+				{
+					html = name + ", ";
+				}
 				else
 				{
 					html = name + " ";
