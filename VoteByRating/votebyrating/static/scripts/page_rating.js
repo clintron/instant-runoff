@@ -59,7 +59,7 @@ $(function()
 		for ( var value = rating_candidate_table.length - 1; value >= 0; --value )
 		{
 			var candidates = rating_candidate_table[value];
-			$( "#slider_labels" ).append( "<div class'candidate_label' id='" + rating_background_colors[value] + "'></div>" );
+			$( "#slider_labels" ).append( "<div class='candidate_label' id='" + rating_background_colors[value] + "'></div>" );
 			for (var index in candidates)
 			{
 				var name = candidates[index];
@@ -156,6 +156,13 @@ $(function()
 			$( "#slider_box" ).slider( "value", rating - 1 );
 			change_selcted_rating( rating - 1 );
 		}
+	});
+	
+	$(document).on( "click", ".candidate_label", function()
+	{
+		var value = 5 - $( ".candidate_label" ).index( $( this ) );
+		$( "#slider_box" ).slider( "value", value );
+		change_selcted_rating(value);
 	});
 	
 	for ( var i = 0; i < 11; ++i )
